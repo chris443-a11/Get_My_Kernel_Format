@@ -1,4 +1,4 @@
-# How to Process a `boot.img` Using GitHub Actions
+# How to Check Your Kernel Format using GitHub Actions
 
 This tutorial will guide you through the steps to get your kernel format using GitHub Actions.
 
