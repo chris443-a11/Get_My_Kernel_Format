@@ -48,3 +48,5 @@ You’ve now successfully processed a `boot.img` file using GitHub Actions:
 - Uploaded the `boot.img` file.
 - Ran the GitHub Action to process it.
 - Retrieved the kernel format.
+
+### If you lazy to do it you can PM [me](t.me/fastbooteraselk2)
