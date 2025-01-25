@@ -34,11 +34,12 @@ jobs:
           # Ensure magiskboot is executable
           chmod +x magiskboot
 
-          KERNEL_FMT=$(./magiskboot unpack boot.img 2>&1 | grep 'KERNEL_FMT' | cut -f2 -d '[]')
-          if echo "$KERNEL_FMT" | grep -qi 'gzip'; then
-          echo "Your kernel format is GZIP (gz)"
-          elif echo "$KERNEL_FMT" | grep -qi 'lz4'; then
-          echo "Your kernel format is LZ4 (lz4)"
-          elif echo "$KERNEL_FMT" | grep -qi 'raw'; then
-          echo "Your kernel format is raw"
-          fi
+          ./magiskboot unpack boot.img
+          #KERNEL_FMT=$(./magiskboot unpack boot.img 2>&1 | grep 'KERNEL_FMT' | cut -f2 -d '[]')
+          #if echo "$KERNEL_FMT" | grep -qi 'gzip'; then
+          #echo "Your kernel format is GZIP (gz)"
+          #elif echo "$KERNEL_FMT" | grep -qi 'lz4'; then
+          #echo "Your kernel format is LZ4 (lz4)"
+          #elif echo "$KERNEL_FMT" | grep -qi 'raw'; then
+          #echo "Your kernel format is raw"
+          #fi
