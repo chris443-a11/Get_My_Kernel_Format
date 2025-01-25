@@ -1,4 +1,4 @@
-name: Process boot.img from URL
+name: Check kernel format
 
 on:
   workflow_dispatch: # Allow manual triggering of the workflow
@@ -16,7 +16,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Download boot.img from the provided URL
       - name: Download boot.img
@@ -34,5 +34,11 @@ jobs:
           # Ensure magiskboot is executable
           chmod +x magiskboot
 
-          # Run magiskboot and capture output
-          ./magiskboot unpack boot.img
+          KERNEL_FMT=$(./magiskboot unpack boot.img 2>&1 | grep 'KERNEL_FMT' | cut -f2 -d '[]')
+          if echo "$KERNEL_FMT" | grep -qi 'gzip'; then
+          echo "Your kernel format is GZIP (gz)"
+          elif echo "$KERNEL_FMT" | grep -qi 'lz4'; then
+          echo "Your kernel format is LZ4 (lz4)"
+          elif echo "$KERNEL_FMT" | grep -qi 'raw'; then
+          echo "Your kernel format is raw"
+          fi
