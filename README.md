@@ -1,6 +1,6 @@
 # How to Process a `boot.img` Using GitHub Actions
 
-This tutorial will guide you through the steps to process a `boot.img` file using a GitHub Action. The workflow will download the `boot.img`, extract information about the kernel format, and save the output to a file.
+This tutorial will guide you through the steps to get your kernel format using GitHub Actions.
 
 ## Step 1: Fork the Repository
 
@@ -9,9 +9,7 @@ This tutorial will guide you through the steps to process a `boot.img` file usin
 
 ## Step 2: Upload Your `boot.img` File
 
-1. **Prepare Your `boot.img`**:  
-   You will need to upload a `boot.img` file for processing. Ensure your `boot.img` file is correctly named `boot.img` (all lowercase).
-
+1. **Prepare Your `boot.img` file**
 2. **Upload `boot.img`**:
    - https://filebin.net/
    - Click on the **Add file** button and select **Upload files**.
@@ -23,7 +21,7 @@ This tutorial will guide you through the steps to process a `boot.img` file usin
    - This tab lists all workflows in the repository. Find the workflow designed to process the `boot.img`.
 
 2. **Run the Action**:
-   - In the Actions tab, locate the workflow named **"Process boot.img from URL"** or similar.
+   - In the Actions tab, locate the workflow named **"Check kernel format"** or similar.
    - Click on the workflow and press the **Run workflow** button.
    - Enter the URL to the `boot.img` file you uploaded in Step 2.
      - You can use the raw URL of the `boot.img`. The URL should look something like:  
@@ -38,15 +36,5 @@ This tutorial will guide you through the steps to process a `boot.img` file usin
 
 2. **Check the Output**:
    - Once the action completes, view the **logs** from the workflow run.
-   - You’ll see the kernel format (`KERNEL_FMT`) printed in the logs.
-
-## Summary
-
-You’ve now successfully processed a `boot.img` file using GitHub Actions:
-
-- Forked the repo.
-- Uploaded the `boot.img` file.
-- Ran the GitHub Action to process it.
-- Retrieved the kernel format.
 
 ### If you lazy to do it you can PM [me](t.me/fastbooteraselk2)
