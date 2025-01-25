@@ -1,4 +1,4 @@
-# How to Check Your Kernel Format using GitHub Actions
+# How to Get Your Kernel Format using GitHub Actions
 
 This tutorial will guide you through the steps to get your kernel format using GitHub Actions.
 
@@ -17,11 +17,10 @@ This tutorial will guide you through the steps to get your kernel format using G
 ## Step 3: Enter URL and Run the Action
 
 1. **Navigate to the Actions Tab**:
-   - Go to the **Actions** tab in your forked repository.  
-   - This tab lists all workflows in the repository. Find the workflow designed to process the `boot.img`.
+   - Go to the **Actions** tab in your forked repository.
 
 2. **Run the Action**:
-   - In the Actions tab, locate the workflow named **"Check kernel format"** or similar.
+   - In the Actions tab, locate the workflow named **"Get kernel format"** or similar.
    - Click on the workflow and press the **Run workflow** button.
    - Enter the URL to the `boot.img` file you uploaded in Step 2.
      - You can use the raw URL of the `boot.img`. The URL should look something like:  
