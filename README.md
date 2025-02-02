@@ -36,4 +36,4 @@ This tutorial will guide you through the steps to get your kernel format using G
 2. **Check the Output**:
    - Once the action completes, view the **logs** from the workflow run.
 
-### If you lazy to do it you can PM [me](t.me/fastbooteraselk2)
+### If you lazy to do it you can PM [me](https://t.me/fastbooteraselk2)
